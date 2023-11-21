@@ -133,6 +133,39 @@ input {
   }
 }
 
+/* --------------------------- MAIN STYLING STARTS HERE -------------------------------- */
+.select-a-plan {
+  display: flex;
+  width: 80rem;
+  padding: 1.2rem 0.8rem 1.2rem 1.6rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.8rem;
+  background: var(--grey-grey-300, #1a1a1a);
+
+  & p {
+    color: var(--font-light, #e3e3e3);
+
+    /* Text-13/medium */
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 18.2px */
+  }
+
+  & button {
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--White, #fff);
+    box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
+  }
+}
+
 /* ---------------------------------------------------------------------------------------------------- MEDIA QUERY BEGINS HERE ------------------------------------------------------------------------------------------ */
 /* For Big Desktops (1400px) */
 @media (min-width: 87.999em) {
