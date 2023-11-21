@@ -19,3 +19,13 @@ body {
   min-height: 100vh;
   min-height: 100svh;
 }
+html {
+  font-size: 62.5%;
+}
+nav {
+  background: var(--grey-grey-300, #1a1a1a);
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
