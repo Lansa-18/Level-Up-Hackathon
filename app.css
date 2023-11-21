@@ -90,4 +90,26 @@ input {
     border-radius: 0.8rem;
     background: var(--grey-grey-200, #303030);
   }
+
+  .dav-collections {
+    display: flex;
+    padding: 2px 2px 2px 8px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--grey-grey-200, #303030);
+
+    & p {
+      color: var(--font-light, #e3e3e3);
+      leading-trim: both;
+      text-edge: cap;
+
+      /* Text-12/medium */
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%; /* 15.6px */
+    }
+  }
 }
