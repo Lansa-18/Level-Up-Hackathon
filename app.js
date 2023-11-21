@@ -9,6 +9,6 @@ const selectAPlanContainer = document.querySelector('.select-a-plan');
 // Event Listerners
 selectClose.addEventListener('click', function(e){
     e.preventDefault();
-    e.target.closest('.select-a-plan').classlist.add(hidden-half)
+    e.target.closest('.select-a-plan').classList.add('invisible');
     // console.log('Clicked');
 })
