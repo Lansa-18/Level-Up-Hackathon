@@ -136,7 +136,10 @@ input {
 /* --------------------------- MAIN STYLING STARTS HERE -------------------------------- */
 .select-a-plan {
   display: flex;
-  width: 80rem;
+  /* width: 80rem; */
+  width: 60%;
+  margin: auto;
+  margin-top: 3.2rem;
   padding: 1.2rem 0.8rem 1.2rem 1.6rem;
   justify-content: space-between;
   align-items: center;
@@ -188,9 +191,7 @@ input {
 }
 /* For Landscape phone (768px) */
 @media (max-width: 47.999em) {
-  .nav__flex--middle {
-    width: 35rem;
-  }
+
 }
 /* For Phone (575px) */
 @media (max-width: 35.999em) {
