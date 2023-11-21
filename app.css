@@ -100,10 +100,10 @@ input {
 
   .dav-collections {
     display: flex;
-    padding: 2px 2px 2px 8px;
+    padding: 0.2rem 0.2rem 0.2rem 0.8rem;
     align-items: center;
-    gap: 8px;
-    border-radius: 8px;
+    gap: 0.8rem;
+    border-radius: 0.8rem;
     background: var(--grey-grey-200, #303030);
 
     & p {
@@ -113,7 +113,7 @@ input {
 
       /* Text-12/medium */
       font-family: Inter;
-      font-size: 12px;
+      font-size: 1.2rem;
       font-style: normal;
       font-weight: 500;
       line-height: 130%; /* 15.6px */
@@ -156,6 +156,9 @@ input {
 }
 /* For Landscape phone (768px) */
 @media (max-width: 47.999em) {
+  .nav__flex--middle {
+    width: 35rem;
+  }
 }
 /* For Phone (575px) */
 @media (max-width: 35.999em) {
