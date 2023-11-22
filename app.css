@@ -238,6 +238,13 @@ input {
       line-height: 130%; /* 15.6px */
       /* border: 1px solid red; */
     }
+
+    .setup-progress-bar{
+      border: 1px solid red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .setup-div-flex-right {
