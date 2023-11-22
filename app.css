@@ -193,6 +193,7 @@ input {
   box-shadow: .0rem .1rem .0rem .0rem rgba(0, 0, 0, 0.05);
 
   .setup-div-flex {
+    /* border: 1px solid red; */
     display: flex;
     padding: 1.2rem;
     justify-content: space-between;
@@ -260,10 +261,12 @@ input {
   }
 
   .setup-div-flex-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    /* border: 1px solid red; */
+    /* display: flex; */
+    /* justify-content: ; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* gap: 4px; */
   }
 }
 
