@@ -99,12 +99,12 @@ input {
   border: 0.15rem solid var(--stroke-s-200, #616161);
   background: var(--grey-g-200, #303030);
   outline: none;
-  /* position: relative; */
+  transition: all 0.3s ease-in-out;
 
   &::placeholder {
     color: var(--grey-g-100, #b5b5b5);
     font-family: Inter;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
@@ -112,19 +112,18 @@ input {
   }
 
   &:active {
-    border: 2px solid var(--White, #fff);
+    border: 0.2rem solid var(--White, #fff);
     background: var(--grey-g-200, #303030);
   }
 
-  &:focus {
-    border: 2px solid var(--White, #fff);
+  &:hover {
+    border: 0.1rem solid var(--stroke-s-100, #e1e1e1);
     background: var(--grey-g-200, #303030);
   }
-
 
   &:focus {
     color: white;
-    border: 2px solid var(--White, #fff);
+    border: 0.2rem solid var(--White, #fff);
     background: var(--grey-g-200, #303030);
   }
 }
@@ -270,7 +269,7 @@ input {
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 130%; 
+    line-height: 130%;
   }
 }
 
