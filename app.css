@@ -23,6 +23,7 @@ body {
   min-height: 100vh;
   min-height: 100svh;
   font-family: 'Inter', sans-serif;
+  background: var(--Background, #F1F1F1);
 }
 
 html {
@@ -186,10 +187,14 @@ input {
   width: 80rem;
   transform: translateX(-50%);
   margin-top: 1.6rem;
+  border-radius: 1.8rem;
+  border: .1rem solid var(--stroke-s-50, #dbdbdb);
+  background: var(--White, #fff);
+  box-shadow: .0rem .1rem .0rem .0rem rgba(0, 0, 0, 0.05);
 
   .setup-div-flex {
     display: flex;
-    padding: 0.8rem;
+    padding: 1.2rem;
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
@@ -231,24 +236,24 @@ input {
       line-height: 130%; /* 15.6px */
     }
 
-    .setup-progress-bar{
+    .setup-progress-bar {
       width: 55%;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      & progress{
+      & progress {
         width: 50%;
         -webkit-appearance: none;
 
         &::-webkit-progress-value {
-          background-color: #1A1A1A;
-          border-radius: .5rem;
+          background-color: #1a1a1a;
+          border-radius: 0.5rem;
         }
 
         &::-webkit-progress-bar {
-          background: #E3E3E3;
-          border-radius: .5rem;
+          background: #e3e3e3;
+          border-radius: 0.5rem;
         }
       }
     }
