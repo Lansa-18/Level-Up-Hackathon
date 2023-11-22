@@ -199,8 +199,52 @@ input {
     border: 0.1rem solid red;
   }
 
-  .setup-div-flex-left{
-    
+  .setup-div-flex-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+
+    & h6 {
+      color: var(--font-dark, var(--grey-g-200, #303030));
+
+      /* Text-14/semi bold */
+      font-family: Inter;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 19.6px */
+    }
+
+    & p {
+      color: var(--font-dark, var(--grey-g-200, #303030));
+
+      /* Text-13/regular */
+      font-family: Inter;
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 18.2px */
+    }
+
+    & span {
+      color: var(--font-dark, var(--grey-g-200, #303030));
+
+      /* Text-12/regular */
+      font-family: Inter;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 15.6px */
+      /* border: 1px solid red; */
+    }
+  }
+
+  .setup-div-flex-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 }
 
