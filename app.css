@@ -48,8 +48,9 @@ nav {
 }
 
 .nav__flex--middle {
+  background-color: red;
   display: flex;
-  width: 45rem;
+  width: 48rem;
   height: 3.2rem;
   padding: 0.8rem;
   align-items: center;
