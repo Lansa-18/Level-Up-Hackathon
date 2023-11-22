@@ -111,7 +111,16 @@ input {
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background: var(--font-mid-2, #616161);;
+      background: var(--font-mid-2, #616161);
+    }
+
+    &:active {
+      background: var(--grey-grey-50, #656266);
+    }
+
+    &:focus {
+      background: var(--grey-grey-50, #656266);
+      box-shadow: 0px 0px 0px 3px #005bd3, 0px 0px 0px 1px #000;
     }
   }
 
@@ -124,9 +133,17 @@ input {
     background: var(--grey-grey-200, #303030);
     transition: all 0.2s ease-in-out;
 
-
     &:hover {
-      background: var(--font-mid-2, #616161);;
+      background: var(--font-mid-2, #616161);
+    }
+
+    &:active {
+      background: var(--grey-grey-50, #656266);
+    }
+
+    &:focus {
+      background: var(--grey-grey-50, #656266);
+      box-shadow: 0px 0px 0px 3px #005bd3, 0px 0px 0px 1px #000;
     }
 
     & p {
