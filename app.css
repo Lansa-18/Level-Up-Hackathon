@@ -113,7 +113,6 @@ input {
       text-edge: cap;
 
       /* Text-12/medium */
-      font-family: Inter;
       font-size: 1.2rem;
       font-style: normal;
       font-weight: 500;
@@ -152,8 +151,7 @@ input {
   & p {
     color: var(--font-light, #e3e3e3);
 
-    /* Text-13/medium */
-    font-family: Inter;
+    /* Text-13/medium *
     font-size: 1.3rem;
     font-style: normal;
     font-weight: 500;
@@ -209,7 +207,6 @@ input {
       color: var(--font-dark, var(--grey-g-200, #303030));
 
       /* Text-14/semi bold */
-      font-family: Inter;
       font-size: 1.4rem;
       font-style: normal;
       font-weight: 600;
@@ -220,7 +217,6 @@ input {
       color: var(--font-dark, var(--grey-g-200, #303030));
 
       /* Text-13/regular */
-      font-family: Inter;
       font-size: 1.3rem;
       font-style: normal;
       font-weight: 400;
@@ -231,7 +227,6 @@ input {
       color: var(--font-dark, var(--grey-g-200, #303030));
 
       /* Text-12/regular */
-      font-family: Inter;
       font-size: 1.2rem;
       font-style: normal;
       font-weight: 400;
