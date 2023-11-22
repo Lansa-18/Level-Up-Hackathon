@@ -47,8 +47,10 @@ nav {
   /* flex: 1 0 0; */
 }
 
-/* .nav__flex--middle {
-  display: flex;
+.nav__flex--middle {
+  position: relative;
+  /* border: 1px solid red; */
+  /* display: flex;
   width: 48rem;
   height: 3.2rem;
   padding: 0.8rem;
@@ -76,8 +78,8 @@ nav {
   & img {
     background-color: white;
     width: 3%;
-  }
-} */
+  } */
+}
 
 input {
   /* background: var(--grey-g-200, #303030);
@@ -96,12 +98,29 @@ input {
   border-radius: 0.8rem;
   border: 0.15rem solid var(--stroke-s-200, #616161);
   background: var(--grey-g-200, #303030);
-  position: relative;
-
+  outline: none;
+  /* position: relative; */
 
   &::placeholder {
-    font-size: 1.4rem;
+    color: var(--grey-g-100, #b5b5b5);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    padding-left: 2.5rem;
   }
+
+  &:active {
+    border: 2px solid var(--White, #fff);
+    background: var(--grey-g-200, #303030);
+  }
+
+  &:focus {
+    border: 2px solid var(--White, #fff);
+    background: var(--grey-g-200, #303030);
+  }
+
 
   &:focus {
     color: white;
@@ -110,8 +129,11 @@ input {
   }
 }
 
-.search-icon{
+.search-icon {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
 }
 
 .nav__flex--right {
@@ -228,7 +250,9 @@ input {
     gap: 0.8rem;
   }
 
-  & button {
+  .select-link:link,
+  .select-link:visited {
+    text-decoration: none;
     display: flex;
     padding: 0.6rem 1.2rem;
     align-items: center;
@@ -237,6 +261,16 @@ input {
     border: 0.1rem solid rgba(0, 0, 0, 0.1);
     background: var(--White, #fff);
     box-shadow: 0rem -0.1rem 0rem 0rem #b5b5b5 inset;
+    transition: all 0.2s ease-in-out;
+
+    /* Link texts styles */
+    color: var(--font-dark, #323232);
+    /* Text-12/Semi bold */
+    /* font-family: Inter; */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; 
   }
 }
 
