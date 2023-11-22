@@ -68,6 +68,11 @@ nav {
     background: var(--grey-g-200, #303030);
   }
 
+  &:active {
+    border: 2px solid var(--White, #fff);
+    background: var(--grey-g-200, #303030);
+  }
+
   & img {
     background-color: white;
     width: 3%;
