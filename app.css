@@ -351,14 +351,14 @@ input {
 }
 
 .setup-content-flex {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
 
   .setup-online-flex {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 
     .setup-online-flex-top {
-      border: 1px solid red;
+      /* border: 1px solid red; */
       display: flex;
       padding: .8rem;
       align-items: center;
