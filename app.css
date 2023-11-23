@@ -49,46 +49,9 @@ nav {
 
 .nav__flex--middle {
   position: relative;
-  /* border: 1px solid red; */
-  /* display: flex;
-  width: 48rem;
-  height: 3.2rem;
-  padding: 0.8rem;
-  align-items: center;
-  gap: 0.6rem;
-  border-radius: 0.8rem;
-  border: 0.15rem solid var(--stroke-s-200, #616161);
-  background: var(--grey-g-200, #303030);
-  cursor: pointer;
-
-  &:hover {
-    border: 1px solid var(--stroke-s-100, #e1e1e1);
-  }
-
-  &:active {
-    border: 2px solid var(--White, #fff);
-    background: var(--grey-g-200, #303030);
-  }
-
-  &:focus {
-    border: 2px solid var(--White, #fff);
-    background: var(--grey-g-200, #303030);
-  }
-
-  & img {
-    background-color: white;
-    width: 3%;
-  } */
 }
 
 input {
-  /* background: var(--grey-g-200, #303030);
-  outline: 0;
-  border: none;
-  width: 100%;
-  color: white;
-  border: 1px solid red; */
-
   display: flex;
   width: 48rem;
   height: 3.2rem;
@@ -101,6 +64,8 @@ input {
   outline: none;
   transition: all 0.3s ease-in-out;
 
+  padding-left: 3.5rem;
+
   &::placeholder {
     color: var(--grey-g-100, #b5b5b5);
     font-family: Inter;
@@ -108,7 +73,6 @@ input {
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-    padding-left: 2.5rem;
   }
 
   &:active {
