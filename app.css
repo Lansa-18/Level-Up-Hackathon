@@ -118,6 +118,7 @@ input {
     border-radius: 0.8rem;
     background: var(--grey-grey-200, #303030);
     transition: all 0.2s ease-in-out;
+    border: none;
 
     &:hover {
       background: var(--font-mid-2, #616161);
@@ -141,6 +142,7 @@ input {
     border-radius: 0.8rem;
     background: var(--grey-grey-200, #303030);
     transition: all 0.2s ease-in-out;
+    border: none;
 
     &:hover {
       background: var(--font-mid-2, #616161);
@@ -184,8 +186,7 @@ input {
 .select-a-plan {
   display: flex;
   width: 80rem;
-  /* width: 60%; */
-  /* margin: auto; */
+
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -225,15 +226,24 @@ input {
     background: var(--White, #fff);
     box-shadow: 0rem -0.1rem 0rem 0rem #b5b5b5 inset;
     transition: all 0.2s ease-in-out;
-
-    /* Link texts styles */
     color: var(--font-dark, #323232);
-    /* Text-12/Semi bold */
-    /* font-family: Inter; */
-    font-size: 12px;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 600;
     line-height: 130%;
+  }
+
+  .select-link:hover {
+    border-radius: 0.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    background: #f7f7f7;
+    box-shadow: 0rem -0.1rem 0rem 0rem #b5b5b5 inset;
+  }
+
+  .select-link:active {
+    border-radius: 6px ;
+    background: #F7F7F7;
+    box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
   }
 }
 
