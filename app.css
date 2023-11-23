@@ -376,6 +376,14 @@ input {
         font-weight: 500;
         line-height: 140%;
       }
+
+      .hover-effect circle {
+        transition: stroke-dasharray 9s ease-in-out; 
+      }
+
+      .hover-effect:hover circle{
+        stroke-dasharray: none;
+      }
     }
 
     .setup-online-flex-bottom {
