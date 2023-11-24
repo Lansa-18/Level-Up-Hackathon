@@ -355,12 +355,12 @@ input {
   padding: 1.6rem 0.8rem 0 0.8rem;
   width: 100%;
 
-  .setup-online-flex {
+  .setup-flex {
     /* border: 1px solid blue; */
     border-radius: 10px;
     background: #f3f3f3;
 
-    .setup-online-flex-top {
+    .setup-flex-top {
       /* border: 1px solid red; */
       display: flex;
       padding: 0.8rem;
@@ -386,40 +386,61 @@ input {
       }
     }
 
-    .setup-online-flex-bottom {
+    .setup-flex-bottom {
       /* display: flex; */
       padding: 0rem 0.8rem 0rem 0.8rem;
       gap: 9.6rem;
       /* border: 1px solid red; */
 
-      .setup-online-bottom-left {
+      .setup-bottom-left {
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
 
-        & button {
+        .setup-button-flex {
           display: flex;
-          padding: 0.6rem 1.2rem;
-          align-items: center;
-          justify-content: center;
-          gap: 0.8rem;
-          border-radius: 0.6rem;
-          border-top: 0.15rem solid
-            var(--stroke-light-100, rgba(255, 255, 255, 0.2));
-          border-right: 0.15rem solid
-            var(--stroke-light-100, rgba(255, 255, 255, 0.2));
-          border-left: 0.15rem solid
-            var(--stroke-light-100, rgba(255, 255, 255, 0.2));
-          background: #404040;
-          box-shadow: 0rem 0rem 0rem 0.15rem #333, 0rem 0.1rem 0rem 0.15rem #333,
-            0rem 0.2rem 0rem 0rem #000;
-          width: 30%;
-          color: var(--font-light, #f6f3f6);
-          font-size: 1.2rem;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 130%;
-          margin-left: 3.2rem;
+          gap: 1.6rem;
+
+          & button {
+            display: flex;
+            padding: 0.6rem 1.2rem;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            border-radius: 0.6rem;
+            border-top: 0.15rem solid
+              var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+            border-right: 0.15rem solid
+              var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+            border-left: 0.15rem solid
+              var(--stroke-light-100, rgba(255, 255, 255, 0.2));
+            background: #404040;
+            box-shadow: 0rem 0rem 0rem 0.15rem #333,
+              0rem 0.1rem 0rem 0.15rem #333, 0rem 0.2rem 0rem 0rem #000;
+            width: 30%;
+            color: var(--font-light, #f6f3f6);
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%;
+            margin-left: 3.2rem;
+          }
+
+          & div {
+            display: flex;
+            padding: 6px 12px;
+            align-items: center;
+            gap: 8px;
+            border-radius: 6px;
+            color: var(--font-dark, #323232);
+
+            /* Text-12/Semi bold */
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 15.6px */
+          }
         }
       }
 
