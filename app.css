@@ -378,19 +378,19 @@ input {
       }
 
       .hover-effect circle {
-        transition: stroke-dasharray 9s ease-in-out; 
+        transition: stroke-dasharray 9s ease-in-out;
       }
 
-      .hover-effect:hover circle{
+      .hover-effect:hover circle {
         stroke-dasharray: none;
       }
     }
 
     .setup-online-flex-bottom {
-      display: flex;
+      /* display: flex; */
       padding: 0rem 0.8rem 0rem 0.8rem;
       gap: 9.6rem;
-      align-self: stretch;
+      /* border: 1px solid red; */
 
       .setup-online-bottom-left {
         display: flex;
@@ -458,6 +458,11 @@ input {
 .hidden {
   display: none;
 }
+
+.visible-flex {
+  display: flex;
+}
+
 /* ---------------------------------------------------------------------------------------------------- MEDIA QUERY BEGINS HERE ------------------------------------------------------------------------------------------ */
 /* For Big Desktops (1400px) */
 @media (min-width: 87.999em) {
