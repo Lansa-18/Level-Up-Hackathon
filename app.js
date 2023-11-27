@@ -12,6 +12,8 @@ const setupContent = document.querySelector('.setup-content-flex');
 const setupFlexBottom = document.querySelector('.setup-flex-bottom');
 const setupFlexs = document.querySelectorAll('.setup-flex');
 const checkerSvgs = document.querySelectorAll('.hover-effect');
+const progressBar = document.querySelector('#file');
+const progressLabel = document.querySelector('.progress-label');
 
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
@@ -89,6 +91,7 @@ const orginalSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="2
 <circle cx="16" cy="16" r="12" stroke="#8A8A8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
 </svg>`;
 
+let counter = 0;
 checkerSvgs.forEach(checkerSvg => {
   let isOriginal = true;
   checkerSvg.addEventListener('click', function (e) {
@@ -106,9 +109,15 @@ checkerSvgs.forEach(checkerSvg => {
       }, 100);
 
       isOriginal = false;
+      progressBar.value += 20;
+      counter++;
+      progressLabel.textContent = `${counter}/5 Completed`;
     } else {
       checkerSvg.innerHTML = orginalSvg;
       isOriginal = true;
+      counter--;
+      progressBar.value -= 20;
+      progressLabel.textContent = `${counter}/5 Completed`;
     }
   });
 });
