@@ -18,8 +18,8 @@ setupDropdowns.forEach(function(setupDropdown){
     setupDropdown.addEventListener('click', function(e){
         e.preventDefault();
         // console.log('Clicked');
-        if (e.target.classList.contains('setup-dropdown')) {
-            e.target.closest('.setup-dropdown').querySelector('.setup-dropdown-content').classList.toggle('invisible');
+        if (e.target.classList.contains('setup-flex-top')) {
+            e.target.closest('#setup-dropdown').querySelector('.setup-flex-bottom').classList.toggle('invisible');
             
         }
     })
