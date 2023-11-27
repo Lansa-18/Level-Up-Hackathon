@@ -11,11 +11,11 @@ const accordionBottom = document.querySelector('.accordion-bottom');
 const setupContent = document.querySelector('.setup-content-flex');
 const setupFlexBottom = document.querySelector('.setup-flex-bottom');
 const setupFlexs = document.querySelectorAll('.setup-flex');
+
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
   e.preventDefault();
   e.target.closest('.select-a-plan').classList.add('invisible');
-  // console.log('Clicked');
 });
 
 setupDropdowns.forEach(setupDropdown => {

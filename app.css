@@ -396,6 +396,7 @@ input {
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
+        border: 1px solid red;
 
         .setup-button-flex {
           display: flex;
