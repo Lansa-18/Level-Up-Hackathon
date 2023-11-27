@@ -4,7 +4,7 @@ console.log('Hello World');
 // Elements
 const selectClose = document.querySelector('.select-close');
 const selectAPlanContainer = document.querySelector('.select-a-plan');
-const setupDropdowns = document.querySelectorAll('#setup-dropdown');
+const setupDropdowns = document.querySelectorAll('.setup-dropdown');
 const setupAccordion = document.querySelector('.setup-div-flex-right');
 const accordionTop = document.querySelector('.accordion-top');
 const accordionBottom = document.querySelector('.accordion-bottom');
@@ -21,16 +21,13 @@ selectClose.addEventListener('click', function (e) {
 setupDropdowns.forEach(function (setupDropdown, i, arr) {
   setupDropdown.addEventListener('click', function (e) {
     e.preventDefault();
-    if (e.target.closest('.setup-flex').contains('active')) {
+    if (e.target.closest('.setup-flex').classList.contains('active')) {
       console.log('Contains ACTIVE');
-      // setupFlex.classList.remove('active');
-      // setupFlexBottom.classList.toggle('hidden');
-      // setupFlexBottom.classList.toggle('visible-flex');
+      console.log(e.target.querySelector('.setupFlexBottom'));
     } else {
       console.log('Does NOT contain ACTIVE');
-      // setupFlex.classList.add('active');
-      // setupFlexBottom.classList.toggle('hidden');
-      // setupFlexBottom.classList.toggle('visible-flex');
+      e.target.closest('.setup-flex').querySelector('.setup-flex-bottom').classList.toggle('hidden');
+      e.target.closest('.setup-flex').querySelector('.setup-flex-bottom').classList.toggle('visible-flex');
     }
   });
 });
@@ -43,3 +40,4 @@ setupAccordion.addEventListener('click', function (e) {
 
 });
 
+// console.log(setupDropdowns);
