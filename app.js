@@ -27,7 +27,7 @@ setupDropdowns.forEach(function (setupDropdown, i, arr) {
       // setupFlexBottom.classList.toggle('hidden');
       // setupFlexBottom.classList.toggle('visible-flex');
     } else {
-      console.log('Contains ACTIVE');
+      console.log('Does NOT contain ACTIVE');
       // setupFlex.classList.add('active');
       // setupFlexBottom.classList.toggle('hidden');
       // setupFlexBottom.classList.toggle('visible-flex');
