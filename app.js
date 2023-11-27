@@ -85,7 +85,6 @@ const svg3 = `<svg width="27" height="27" viewBox="0 0 24 24" fill="none" xmlns=
 ></path>
 </svg>`;
 
-
 const orginalSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 32 32" fill="none">
 <circle cx="16" cy="16" r="12" stroke="#8A8A8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
 </svg>`;
@@ -100,7 +99,12 @@ checkerSvgs.forEach(checkerSvg => {
       //After a short delay, display the second image
       setTimeout(() => {
         checkerSvg.innerHTML = svg2;
-      }, 150);
+
+        setTimeout(() => {
+          checkerSvg.innerHTML = svg3;
+        }, 100);
+      }, 100);
+
       isOriginal = false;
     } else {
       checkerSvg.innerHTML = orginalSvg;
