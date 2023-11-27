@@ -18,19 +18,62 @@ selectClose.addEventListener('click', function (e) {
   // console.log('Clicked');
 });
 
-setupDropdowns.forEach(function (setupDropdown, i, arr) {
-  setupDropdown.addEventListener('click', function (e) {
+// Method 1
+// setupDropdowns.forEach(function (setupDropdown, i, arr) {
+//   setupDropdown.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     if (e.target.closest('.setup-flex').classList.contains('active')) {
+//       console.log('Contains ACTIVE');
+//     } else {
+//       console.log('Does NOT contain ACTIVE');
+//       const parentHasSetupFlexActive = e.target.closest('.setup-content-flex').querySelector('.setup-flex.active');
+//       const parentHasSetupFlexBottomActive = e.target.closest('.setup-content-flex').querySelector('.setup-flex-bottom.visible-flex');
+//       if (parentHasSetupFlexActive) {
+//         console.log('Found a container that Contains ACTIVE');
+//         parentHasSetupFlexActive.classList.remove('active');
+//         parentHasSetupFlexBottomActive.classList.toggle('visible-flex');
+//         parentHasSetupFlexBottomActive.classList.toggle('hidden');
+//         e.target.closest('.setup-flex').classList.add('active');
+//         e.target.closest('.setup-flex').querySelector('.setup-flex-bottom').classList.toggle('hidden');
+//         e.target.closest('.setup-flex').querySelector('.setup-flex-bottom').classList.toggle('visible-flex');
+//       }
+//     }
+//   });
+// });
+
+setupDropdowns.forEach(setupDropdown => {
+  setupDropdown.addEventListener('click', e => {
     e.preventDefault();
-    if (e.target.closest('.setup-flex').classList.contains('active')) {
+
+    const setupFlex = e.target.closest('.setup-flex');
+    const setupContentFlex = e.target.closest('.setup-content-flex');
+    const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
+
+    if (setupFlex.classList.contains('active')) {
       console.log('Contains ACTIVE');
-      console.log(e.target.querySelector('.setupFlexBottom'));
-    } else {
-      console.log('Does NOT contain ACTIVE');
-      e.target.closest('.setup-flex').querySelector('.setup-flex-bottom').classList.toggle('hidden');
-      e.target.closest('.setup-flex').querySelector('.setup-flex-bottom').classList.toggle('visible-flex');
+      return;
     }
+
+    console.log('Does NOT contain ACTIVE');
+
+    const parentHasSetupFlexActive = setupContentFlex.querySelector('.setup-flex.active');
+    const parentHasSetupFlexBottomActive = setupContentFlex.querySelector('.setup-flex-bottom.visible-flex');
+
+    if (!parentHasSetupFlexActive) return;
+
+    console.log('Found a container that Contains ACTIVE');
+
+    parentHasSetupFlexActive.classList.remove('active');
+    parentHasSetupFlexBottomActive.classList.toggle('visible-flex');
+    parentHasSetupFlexBottomActive.classList.toggle('hidden');
+
+    setupFlex.classList.add('active');
+    setupFlexBottom.classList.toggle('hidden');
+    setupFlexBottom.classList.toggle('visible-flex');
   });
 });
+
+
 
 setupAccordion.addEventListener('click', function (e) {
   e.preventDefault();
@@ -41,3 +84,4 @@ setupAccordion.addEventListener('click', function (e) {
 });
 
 // console.log(setupDropdowns);
+

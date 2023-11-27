@@ -360,7 +360,7 @@ input {
     border-radius: 10px;
 
     .setup-flex-top {
-      border: 1px solid red;
+      /* border: 1px solid red; */
       display: flex;
       padding: 0.8rem;
       align-items: center;
