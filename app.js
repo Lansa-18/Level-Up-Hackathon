@@ -6,6 +6,7 @@ const selectClose = document.querySelector('.select-close');
 const selectAPlanContainer = document.querySelector('.select-a-plan');
 const setupDropdowns = document.querySelectorAll('#setup-dropdown');
 const setupAccordion = document.querySelector('.setup-div-flex-right');
+const setupContent = document.querySelector('.setup-content-flex');
 
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
@@ -29,7 +30,7 @@ setupDropdowns.forEach(function (setupDropdown) {
 
 setupAccordion.addEventListener('click', function(e){
     e.preventDefault();
-    
+    setupContent.classList.toggle('hidden');
 })
 
 <svg
