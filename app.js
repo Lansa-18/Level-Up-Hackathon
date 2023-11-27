@@ -20,13 +20,14 @@ selectClose.addEventListener('click', function (e) {
 setupDropdowns.forEach(function (setupDropdown) {
   setupDropdown.addEventListener('click', function (e) {
     e.preventDefault();
-    // console.log('Clicked');
-    if (e.target.classList.contains('setup-flex-top')) {
-      e.target
-        .closest('#setup-dropdown')
-        .querySelector('.setup-flex-bottom')
-        .classList.toggle('invisible');
-    }
+    console.log('Clicked');
+    // if (e.target.classList.contains('setup-flex-top')) {
+    //   e.target
+    //     .closest('#setup-dropdown')
+    //     .querySelector('.setup-flex-bottom')
+    //     .classList.toggle('visible-flex')
+    //     .classList.toggle('hidden');
+    // }
   });
 });
 

@@ -358,7 +358,6 @@ input {
   .setup-flex {
     /* border: 1px solid blue; */
     border-radius: 10px;
-    background: #f3f3f3;
 
     .setup-flex-top {
       /* border: 1px solid red; */
@@ -480,6 +479,12 @@ input {
 
 .visible-flex {
   display: flex;
+}
+
+.active{
+  background: #f3f3f3;
+  
+
 }
 
 /* ---------------------------------------------------------------------------------------------------- MEDIA QUERY BEGINS HERE ------------------------------------------------------------------------------------------ */
