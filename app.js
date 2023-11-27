@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', event => {
       const setupFlex = e.target.closest('.setup-flex');
       const setupContentFlex = e.target.closest('.setup-content-flex');
       const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
+      // console.log(setupFlexBottom);
 
       if (setupFlex.classList.contains('active')) {
         return;
@@ -54,6 +55,38 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   });
 });
+
+// setupDropdowns.forEach(function (setupDropdown, i, arr) {
+//   setupDropdown.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     if (e.target.closest('.setup-flex').classList.contains('active')) {
+//       console.log('Contains ACTIVE');
+//     } else {
+//       console.log('Does NOT contain ACTIVE');
+//       const parentHasSetupFlexActive = e.target
+//         .closest('.setup-content-flex')
+//         .querySelector('.setup-flex.active');
+//       const parentHasSetupFlexBottomActive = e.target
+//         .closest('.setup-content-flex')
+//         .querySelector('.setup-flex-bottom.visible-flex');
+//       if (parentHasSetupFlexActive) {
+//         console.log('Found a container that Contains ACTIVE');
+//         parentHasSetupFlexActive.classList.remove('active');
+//         parentHasSetupFlexBottomActive.classList.toggle('visible-flex');
+//         parentHasSetupFlexBottomActive.classList.toggle('hidden');
+//         e.target.closest('.setup-flex').classList.add('active');
+//         e.target
+//           .closest('.setup-flex')
+//           .querySelector('.setup-flex-bottom')
+//           .classList.toggle('hidden');
+//         e.target
+//           .closest('.setup-flex')
+//           .querySelector('.setup-flex-bottom')
+//           .classList.toggle('visible-flex');
+//       }
+//     }
+//   });
+// });
 
 setupAccordion.addEventListener('click', function (e) {
   e.preventDefault();
@@ -92,7 +125,7 @@ const orginalSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="2
 </svg>`;
 
 let counter = 0;
-checkerSvgs.forEach(checkerSvg => {
+checkerSvgs.forEach((checkerSvg, index) => {
   let isOriginal = true;
   checkerSvg.addEventListener('click', function (e) {
     if (isOriginal) {
@@ -112,6 +145,23 @@ checkerSvgs.forEach(checkerSvg => {
       progressBar.value += 20;
       counter++;
       progressLabel.textContent = `${counter}/5 Completed`;
+
+      // Close the current dropdown
+      const setupFlex = checkerSvg.closest('.setup-flex');
+      const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
+      setupFlex.classList.remove('active');
+      setupFlexBottom.classList.toggle('visible-flex');
+      setupFlexBottom.classList.toggle('hidden');
+
+      // Open the next dropdown
+      const nextSetupFlex = setupDropdowns[index + 1];
+      if (nextSetupFlex) {
+        const nextSetupFlexBottom =
+          nextSetupFlex.querySelector('.setup-flex-bottom');
+        nextSetupFlex.classList.add('active');
+        nextSetupFlexBottom.classList.toggle('hidden');
+        nextSetupFlexBottom.classList.toggle('visible-flex');
+      }
     } else {
       checkerSvg.innerHTML = orginalSvg;
       isOriginal = true;
