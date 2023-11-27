@@ -366,6 +366,7 @@ input {
       align-items: center;
       gap: 0.6rem;
       align-self: stretch;
+      cursor: pointer;
 
       & h6 {
         color: var(--font-dark, var(--grey-g-200, #303030));
