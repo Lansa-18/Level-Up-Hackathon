@@ -18,29 +18,6 @@ selectClose.addEventListener('click', function (e) {
   // console.log('Clicked');
 });
 
-// Method 1
-// setupDropdowns.forEach(function (setupDropdown, i, arr) {
-//   setupDropdown.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     if (e.target.closest('.setup-flex').classList.contains('active')) {
-//       console.log('Contains ACTIVE');
-//     } else {
-//       console.log('Does NOT contain ACTIVE');
-//       const parentHasSetupFlexActive = e.target.closest('.setup-content-flex').querySelector('.setup-flex.active');
-//       const parentHasSetupFlexBottomActive = e.target.closest('.setup-content-flex').querySelector('.setup-flex-bottom.visible-flex');
-//       if (parentHasSetupFlexActive) {
-//         console.log('Found a container that Contains ACTIVE');
-//         parentHasSetupFlexActive.classList.remove('active');
-//         parentHasSetupFlexBottomActive.classList.toggle('visible-flex');
-//         parentHasSetupFlexBottomActive.classList.toggle('hidden');
-//         e.target.closest('.setup-flex').classList.add('active');
-//         e.target.closest('.setup-flex').querySelector('.setup-flex-bottom').classList.toggle('hidden');
-//         e.target.closest('.setup-flex').querySelector('.setup-flex-bottom').classList.toggle('visible-flex');
-//       }
-//     }
-//   });
-// });
-
 setupDropdowns.forEach(setupDropdown => {
   setupDropdown.addEventListener('click', e => {
     e.preventDefault();
@@ -50,14 +27,15 @@ setupDropdowns.forEach(setupDropdown => {
     const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
 
     if (setupFlex.classList.contains('active')) {
-      console.log('Contains ACTIVE');
       return;
     }
-
     console.log('Does NOT contain ACTIVE');
 
-    const parentHasSetupFlexActive = setupContentFlex.querySelector('.setup-flex.active');
-    const parentHasSetupFlexBottomActive = setupContentFlex.querySelector('.setup-flex-bottom.visible-flex');
+    const parentHasSetupFlexActive =
+      setupContentFlex.querySelector('.setup-flex.active');
+    const parentHasSetupFlexBottomActive = setupContentFlex.querySelector(
+      '.setup-flex-bottom.visible-flex'
+    );
 
     if (!parentHasSetupFlexActive) return;
 
@@ -73,15 +51,9 @@ setupDropdowns.forEach(setupDropdown => {
   });
 });
 
-
-
 setupAccordion.addEventListener('click', function (e) {
   e.preventDefault();
   setupContent.classList.toggle('hidden');
   accordionTop.classList.toggle('hidden');
   accordionBottom.classList.toggle('hidden');
-
 });
-
-// console.log(setupDropdowns);
-
