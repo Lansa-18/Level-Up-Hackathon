@@ -9,7 +9,7 @@ const setupAccordion = document.querySelector('.setup-div-flex-right');
 const accordionTop = document.querySelector('.accordion-top');
 const accordionBottom = document.querySelector('.accordion-bottom');
 const setupContent = document.querySelector('.setup-content-flex');
-
+const setupFlexBottom = document.querySelector('.setup-flex-bottom');
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
   e.preventDefault();
@@ -21,13 +21,7 @@ setupDropdowns.forEach(function (setupDropdown) {
   setupDropdown.addEventListener('click', function (e) {
     e.preventDefault();
     console.log('Clicked');
-    // if (e.target.classList.contains('setup-flex-top')) {
-    //   e.target
-    //     .closest('#setup-dropdown')
-    //     .querySelector('.setup-flex-bottom')
-    //     .classList.toggle('visible-flex')
-    //     .classList.toggle('hidden');
-    // }
+
   });
 });
 
