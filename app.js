@@ -11,6 +11,7 @@ const accordionBottom = document.querySelector('.accordion-bottom');
 const setupContent = document.querySelector('.setup-content-flex');
 const setupFlexBottom = document.querySelector('.setup-flex-bottom');
 const setupFlexs = document.querySelectorAll('.setup-flex');
+const checkerSvg = document.querySelector('.hover-effect');
 
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
