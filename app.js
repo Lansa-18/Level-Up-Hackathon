@@ -10,6 +10,7 @@ const accordionTop = document.querySelector('.accordion-top');
 const accordionBottom = document.querySelector('.accordion-bottom');
 const setupContent = document.querySelector('.setup-content-flex');
 const setupFlexBottom = document.querySelector('.setup-flex-bottom');
+const setupFlexs = document.querySelectorAll('.setup-flex');
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
   e.preventDefault();
@@ -17,11 +18,20 @@ selectClose.addEventListener('click', function (e) {
   // console.log('Clicked');
 });
 
-setupDropdowns.forEach(function (setupDropdown) {
+setupDropdowns.forEach(function (setupDropdown, i, arr) {
   setupDropdown.addEventListener('click', function (e) {
     e.preventDefault();
-    console.log('Clicked');
-
+    if (e.target.closest('.setup-flex').contains('active')) {
+      console.log('Contains ACTIVE');
+      // setupFlex.classList.remove('active');
+      // setupFlexBottom.classList.toggle('hidden');
+      // setupFlexBottom.classList.toggle('visible-flex');
+    } else {
+      console.log('Contains ACTIVE');
+      // setupFlex.classList.add('active');
+      // setupFlexBottom.classList.toggle('hidden');
+      // setupFlexBottom.classList.toggle('visible-flex');
+    }
   });
 });
 
@@ -32,3 +42,4 @@ setupAccordion.addEventListener('click', function (e) {
   accordionBottom.classList.toggle('hidden');
 
 });
+
