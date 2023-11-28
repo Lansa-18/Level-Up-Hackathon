@@ -15,6 +15,7 @@ const checkerSvgs = document.querySelectorAll('.hover-effect');
 const progressBar = document.querySelector('#file');
 const progressLabel = document.querySelector('.progress-label');
 const bellIcon = document.querySelector('.bell-div');
+const bellNotification = document.querySelector('.bell-notification');
 
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
@@ -55,38 +56,6 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   });
 });
-
-// setupDropdowns.forEach(function (setupDropdown, i, arr) {
-//   setupDropdown.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     if (e.target.closest('.setup-flex').classList.contains('active')) {
-//       console.log('Contains ACTIVE');
-//     } else {
-//       console.log('Does NOT contain ACTIVE');
-//       const parentHasSetupFlexActive = e.target
-//         .closest('.setup-content-flex')
-//         .querySelector('.setup-flex.active');
-//       const parentHasSetupFlexBottomActive = e.target
-//         .closest('.setup-content-flex')
-//         .querySelector('.setup-flex-bottom.visible-flex');
-//       if (parentHasSetupFlexActive) {
-//         console.log('Found a container that Contains ACTIVE');
-//         parentHasSetupFlexActive.classList.remove('active');
-//         parentHasSetupFlexBottomActive.classList.toggle('visible-flex');
-//         parentHasSetupFlexBottomActive.classList.toggle('hidden');
-//         e.target.closest('.setup-flex').classList.add('active');
-//         e.target
-//           .closest('.setup-flex')
-//           .querySelector('.setup-flex-bottom')
-//           .classList.toggle('hidden');
-//         e.target
-//           .closest('.setup-flex')
-//           .querySelector('.setup-flex-bottom')
-//           .classList.toggle('visible-flex');
-//       }
-//     }
-//   });
-// });
 
 // Implementing the Setup Accordion functionality
 setupAccordion.addEventListener('click', function (e) {
@@ -202,4 +171,10 @@ const checkerSvgPromises = Array.from(checkerSvgs).map((checkerSvg, index) =>
 
 Promise.all(checkerSvgPromises).then(() => {
   console.log('All SVGs processed');
+});
+
+// Implementing the bell icon functionality
+bellIcon.addEventListener('click', function (e) {
+  e.preventDefault();
+  bellNotification.classList.toggle('hidden');
 });
