@@ -16,6 +16,7 @@ const progressBar = document.querySelector('#file');
 const progressLabel = document.querySelector('.progress-label');
 const bellIcon = document.querySelector('.bell-div');
 const bellNotification = document.querySelector('.bell-notification');
+const profileBtn = document.querySelector('.dav-collection');
 
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
