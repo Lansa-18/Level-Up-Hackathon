@@ -176,5 +176,5 @@ Promise.all(checkerSvgPromises).then(() => {
 // Implementing the bell icon functionality
 bellIcon.addEventListener('click', function (e) {
   e.preventDefault();
-  bellNotification.classList.toggle('hidden');
+  bellNotification.classList.toggle('fade-in');
 });

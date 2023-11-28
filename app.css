@@ -515,6 +515,8 @@ input {
   position: absolute;
   top: 6.4rem;
   right: 1.5rem;
+  transition: opacity 0.5s ease;
+  opacity: 0;
 
   .bell-notification-flex {
     display: flex;
@@ -560,6 +562,10 @@ input {
       line-height: 140%;
     }
   }
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 .invisible {
