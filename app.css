@@ -596,7 +596,7 @@ input {
     align-items: flex-start;
     gap: 0.4rem;
     align-self: stretch;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
 
     .profile-top-name {
       display: flex;
@@ -651,6 +651,14 @@ input {
         line-height: 140%; /* 18.2px */
       }
     }
+  }
+
+  .profile-flex-middle {
+    display: flex;
+    padding: 0.6rem;
+    align-items: center;
+    gap: 0.8rem;
+    align-self: stretch;
   }
 }
 
