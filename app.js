@@ -124,50 +124,128 @@ const orginalSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="2
 <circle cx="16" cy="16" r="12" stroke="#8A8A8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
 </svg>`;
 
-let counter = 0;
-checkerSvgs.forEach((checkerSvg, index) => {
-  let isOriginal = true;
-  checkerSvg.addEventListener('click', function (e) {
-    if (isOriginal) {
-      // Immediately display the first image
-      checkerSvg.innerHTML = svg1;
+// let counter = 0;
+// checkerSvgs.forEach((checkerSvg, index) => {
+//   let isOriginal = true;
+//   checkerSvg.addEventListener('click', function (e) {
+//     if (isOriginal) {
+//       // Immediately display the first image
+//       checkerSvg.innerHTML = svg1;
 
-      //After a short delay, display the second image
-      setTimeout(() => {
+//       //After a short delay, display the second image
+//       setTimeout(() => {
+//         checkerSvg.innerHTML = svg2;
+
+//         setTimeout(() => {
+//           checkerSvg.innerHTML = svg3;
+//         }, 100);
+//       }, 100);
+
+//       isOriginal = false;
+//       progressBar.value += 20;
+//       counter++;
+//       progressLabel.textContent = `${counter}/5 Completed`;
+
+//       // Close the current dropdow
+//       const setupFlex = checkerSvg.closest('.setup-flex');
+//       console.log(setupFlex);
+//       const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
+//       setupFlex.classList.toggle('active');
+//       console.log(setupFlexBottom);
+//       setupFlexBottom.classList.toggle('visible-flex');
+//       setupFlexBottom.classList.toggle('hidden');
+
+//       // Open the next dropdown
+//       const nextSetupFlex = setupDropdowns[index + 1].closest('.setup-flex');
+//       console.log(nextSetupFlex);
+//       if (nextSetupFlex) {
+//         const nextSetupFlexBottom =
+//           nextSetupFlex.querySelector('.setup-flex-bottom');
+//           console.log(nextSetupFlexBottom);
+//         nextSetupFlex.classList.add('active');
+//         nextSetupFlexBottom.classList.toggle('hidden');
+//         nextSetupFlexBottom.classList.toggle('visible-flex');
+//       }
+//     } else {
+//       checkerSvg.innerHTML = orginalSvg;
+//       isOriginal = true;
+//       counter--;
+//       progressBar.value -= 20;
+//       progressLabel.textContent = `${counter}/5 Completed`;
+//     }
+//   });
+// });
+
+let counter = 0;
+
+async function processCheckerSvg(checkerSvg, index) {
+  return new Promise(resolve => {
+    let isOriginal = true;
+
+    checkerSvg.addEventListener('click', async function (e) {
+      if (isOriginal) {
+        // Immediately display the first image
+        checkerSvg.innerHTML = svg1;
+
+        // After a short delay, display the second image
+        await delay(100);
         checkerSvg.innerHTML = svg2;
 
-        setTimeout(() => {
-          checkerSvg.innerHTML = svg3;
-        }, 100);
-      }, 100);
+        // After another short delay, display the third image
+        await delay(100);
+        checkerSvg.innerHTML = svg3;
 
-      isOriginal = false;
-      progressBar.value += 20;
-      counter++;
-      progressLabel.textContent = `${counter}/5 Completed`;
+        isOriginal = false;
+        counter++;
+        progressBar.value += 20;
+        progressLabel.textContent = `${counter}/5 Completed`;
 
-      // Close the current dropdown
-      const setupFlex = checkerSvg.closest('.setup-flex');
-      const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
-      setupFlex.classList.remove('active');
-      setupFlexBottom.classList.toggle('visible-flex');
-      setupFlexBottom.classList.toggle('hidden');
+        // Close the current dropdown
+        closeDropdown(checkerSvg);
 
-      // Open the next dropdown
-      const nextSetupFlex = setupDropdowns[index + 1];
-      if (nextSetupFlex) {
-        const nextSetupFlexBottom =
-          nextSetupFlex.querySelector('.setup-flex-bottom');
-        nextSetupFlex.classList.add('active');
-        nextSetupFlexBottom.classList.toggle('hidden');
-        nextSetupFlexBottom.classList.toggle('visible-flex');
+        // Open the next dropdown
+        const nextSetupFlex = setupDropdowns[index + 1]?.closest('.setup-flex');
+        if (nextSetupFlex) {
+          openDropdown(nextSetupFlex);
+        }
+
+        resolve();
+      } else {
+        checkerSvg.innerHTML = orginalSvg;
+        isOriginal = true;
+        counter--;
+        progressBar.value -= 20;
+        progressLabel.textContent = `${counter}/5 Completed`;
+        closeDropdown(checkerSvg);
+        resolve();
       }
-    } else {
-      checkerSvg.innerHTML = orginalSvg;
-      isOriginal = true;
-      counter--;
-      progressBar.value -= 20;
-      progressLabel.textContent = `${counter}/5 Completed`;
-    }
+    });
   });
+}
+
+async function closeDropdown(checkerSvg) {
+  const setupFlex = checkerSvg.closest('.setup-flex');
+  const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
+  setupFlex.classList.remove('active');
+  setupFlexBottom.classList.remove('visible-flex');
+  setupFlexBottom.classList.add('hidden');
+}
+
+async function openDropdown(setupFlex) {
+  const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
+  setupFlex.classList.add('active');
+  setupFlexBottom.classList.remove('hidden');
+  setupFlexBottom.classList.add('visible-flex');
+}
+
+async function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const checkerSvgPromises = Array.from(checkerSvgs).map((checkerSvg, index) =>
+  processCheckerSvg(checkerSvg, index)
+);
+
+Promise.all(checkerSvgPromises).then(() => {
+  console.log('All SVGs processed');
 });
