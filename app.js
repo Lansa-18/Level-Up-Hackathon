@@ -177,7 +177,6 @@ const orginalSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="2
 // });
 
 let counter = 0;
-
 async function processCheckerSvg(checkerSvg, index) {
   return new Promise(resolve => {
     let isOriginal = true;
