@@ -596,8 +596,7 @@ input {
     align-items: flex-start;
     gap: 0.4rem;
     align-self: stretch;
-
-    border
+    border-bottom: 1px solid #E1E1E1;
 
     .profile-top-name {
       display: flex;
