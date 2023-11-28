@@ -593,6 +593,40 @@ input {
     align-items: flex-start;
     gap: 0.4rem;
     align-self: stretch;
+
+    .profile-top-name {
+      display: flex;
+      padding: 0.4rem 1.2rem 0.4rem 0.8rem;
+      justify-content: space-between;
+      align-items: center;
+      align-self: stretch;
+
+      .profile-top-flex {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        & div {
+          text-transform: uppercase;
+          display: flex;
+          height: 2.8rem;
+          padding: 9.625px 5.875px 10.375px 6.125px;
+          justify-content: center;
+          align-items: center;
+          border-radius: .525rem;
+          background: #36fba1;
+        }
+
+        & p {
+          color: var(--font-dark, var(--grey-g-200, #303030));
+          font-family: Inter;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+        }
+      }
+    }
   }
 }
 
