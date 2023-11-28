@@ -542,6 +542,16 @@ input {
         color: black;
       }
     }
+
+    & button{
+      background: var(--White, #FFF);
+      border: var(--White, #FFF);
+
+      &:focus{
+        stroke-width: 1px;
+        stroke: var(--states-focused, #005BD3);
+      }
+    }
   }
 
   .bell-notification-content {
