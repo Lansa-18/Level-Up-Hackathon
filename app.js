@@ -14,6 +14,7 @@ const setupFlexs = document.querySelectorAll('.setup-flex');
 const checkerSvgs = document.querySelectorAll('.hover-effect');
 const progressBar = document.querySelector('#file');
 const progressLabel = document.querySelector('.progress-label');
+const bellIcon = document.querySelector('.bell-div');
 
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
@@ -22,7 +23,6 @@ selectClose.addEventListener('click', function (e) {
 });
 
 // Implementing the Setup Dropdowns functionality
-
 document.addEventListener('DOMContentLoaded', event => {
   setupDropdowns.forEach(setupDropdown => {
     setupDropdown.addEventListener('click', e => {
@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', event => {
 //   });
 // });
 
+// Implementing the Setup Accordion functionality
 setupAccordion.addEventListener('click', function (e) {
   e.preventDefault();
   setupContent.classList.toggle('hidden');
@@ -96,7 +97,6 @@ setupAccordion.addEventListener('click', function (e) {
 });
 
 // Implementing the Checker-Svg functionality
-
 const svg1 = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 28 28" fill="none">
 <path
   d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
@@ -123,58 +123,6 @@ const svg3 = `<svg width="27" height="27" viewBox="0 0 24 24" fill="none" xmlns=
 const orginalSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 32 32" fill="none">
 <circle cx="16" cy="16" r="12" stroke="#8A8A8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
 </svg>`;
-
-// let counter = 0;
-// checkerSvgs.forEach((checkerSvg, index) => {
-//   let isOriginal = true;
-//   checkerSvg.addEventListener('click', function (e) {
-//     if (isOriginal) {
-//       // Immediately display the first image
-//       checkerSvg.innerHTML = svg1;
-
-//       //After a short delay, display the second image
-//       setTimeout(() => {
-//         checkerSvg.innerHTML = svg2;
-
-//         setTimeout(() => {
-//           checkerSvg.innerHTML = svg3;
-//         }, 100);
-//       }, 100);
-
-//       isOriginal = false;
-//       progressBar.value += 20;
-//       counter++;
-//       progressLabel.textContent = `${counter}/5 Completed`;
-
-//       // Close the current dropdow
-//       const setupFlex = checkerSvg.closest('.setup-flex');
-//       console.log(setupFlex);
-//       const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
-//       setupFlex.classList.toggle('active');
-//       console.log(setupFlexBottom);
-//       setupFlexBottom.classList.toggle('visible-flex');
-//       setupFlexBottom.classList.toggle('hidden');
-
-//       // Open the next dropdown
-//       const nextSetupFlex = setupDropdowns[index + 1].closest('.setup-flex');
-//       console.log(nextSetupFlex);
-//       if (nextSetupFlex) {
-//         const nextSetupFlexBottom =
-//           nextSetupFlex.querySelector('.setup-flex-bottom');
-//           console.log(nextSetupFlexBottom);
-//         nextSetupFlex.classList.add('active');
-//         nextSetupFlexBottom.classList.toggle('hidden');
-//         nextSetupFlexBottom.classList.toggle('visible-flex');
-//       }
-//     } else {
-//       checkerSvg.innerHTML = orginalSvg;
-//       isOriginal = true;
-//       counter--;
-//       progressBar.value -= 20;
-//       progressLabel.textContent = `${counter}/5 Completed`;
-//     }
-//   });
-// });
 
 let counter = 0;
 async function processCheckerSvg(checkerSvg, index) {
