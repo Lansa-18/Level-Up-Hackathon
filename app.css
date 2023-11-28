@@ -460,7 +460,7 @@ input {
             &:hover {
               background: #e7e7e7;
             }
-            
+
             &:focus {
               border: 2px solid var(--states-focused, #005bd3);
               background: #fff;
@@ -497,6 +497,29 @@ input {
         top: -3rem;
         width: 100%;
       }
+    }
+  }
+}
+
+.bell-notification {
+  border: 1px solid red;
+  display: inline-flex;
+  padding: 1.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  border-radius: 1.4rem;
+  border: .1rem solid var(--stroke-s-50, #dbdbdb);
+  background: var(--White, #fff);
+  box-shadow: .0rem .4rem .8rem .0rem rgba(0, 0, 0, 0.05);
+
+  .bell-notification-flex{
+    border: 1px solid black;
+    display: flex;
+
+    .img1, .img2{
+      color: black;
+      border: 1px solid red;
     }
   }
 }
