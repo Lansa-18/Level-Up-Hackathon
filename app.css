@@ -585,6 +585,9 @@ input {
   border: 0.1rem solid var(--stroke-s-50, #dbdbdb);
   background: var(--White, #fff);
   box-shadow: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 7rem;
+  right: 1.5rem;
 
   .profile-flex-top {
     display: flex;
@@ -613,7 +616,7 @@ input {
           padding: 9.625px 5.875px 10.375px 6.125px;
           justify-content: center;
           align-items: center;
-          border-radius: .525rem;
+          border-radius: 0.525rem;
           background: #36fba1;
         }
 
@@ -625,6 +628,26 @@ input {
           font-weight: 600;
           line-height: 140%;
         }
+      }
+    }
+
+    .profile-top-label {
+      display: flex;
+      padding: 0.6rem;
+      align-items: center;
+      gap: 0.8rem;
+      align-self: stretch;
+      border-radius: 0.8rem;
+
+      & p {
+        color: var(--font-dark, var(--grey-g-200, #303030));
+
+        /* Text-13/regular */
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 18.2px */
       }
     }
   }
