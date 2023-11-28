@@ -231,6 +231,13 @@ async function closeDropdown(checkerSvg) {
 }
 
 async function openDropdown(setupFlex) {
+  // close all other dropdowns
+  setupDropdowns.forEach(dropdown => {
+    if (dropdown !== setupFlex) {
+      closeDropdown(dropdown);
+    }
+  });
+
   const setupFlexBottom = setupFlex.querySelector('.setup-flex-bottom');
   setupFlex.classList.add('active');
   setupFlexBottom.classList.remove('hidden');
