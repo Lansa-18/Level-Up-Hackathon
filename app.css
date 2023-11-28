@@ -543,13 +543,13 @@ input {
       }
     }
 
-    & button{
-      background: var(--White, #FFF);
-      border: var(--White, #FFF);
+    & button {
+      background: var(--White, #fff);
+      border: var(--White, #fff);
 
-      &:focus{
+      &:focus {
         stroke-width: 1px;
-        stroke: var(--states-focused, #005BD3);
+        stroke: var(--states-focused, #005bd3);
       }
     }
   }
@@ -571,6 +571,28 @@ input {
       font-weight: 600;
       line-height: 140%;
     }
+  }
+}
+
+.profile-div {
+  display: flex;
+  width: 32rem;
+  padding: 0.6rem 0rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  border-radius: 1.4rem;
+  border: 0.1rem solid var(--stroke-s-50, #dbdbdb);
+  background: var(--White, #fff);
+  box-shadow: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.05);
+
+  .profile-flex-top {
+    display: flex;
+    padding: 0rem 0.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    align-self: stretch;
   }
 }
 
