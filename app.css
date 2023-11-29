@@ -588,6 +588,8 @@ input {
   position: absolute;
   top: 7rem;
   right: 1.5rem;
+  transition: opacity 0.5s ease;
+  opacity: 0;
 
   .profile-flex-top {
     display: flex;

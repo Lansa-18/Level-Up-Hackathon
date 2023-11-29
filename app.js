@@ -16,7 +16,8 @@ const progressBar = document.querySelector('#file');
 const progressLabel = document.querySelector('.progress-label');
 const bellIcon = document.querySelector('.bell-div');
 const bellNotification = document.querySelector('.bell-notification');
-const profileBtn = document.querySelector('.dav-collection');
+const profileBtn = document.querySelector('.dav-collections');
+const profileDiv = document.querySelector('.profile-div');
 
 // Event Listerners
 selectClose.addEventListener('click', function (e) {
@@ -178,4 +179,10 @@ Promise.all(checkerSvgPromises).then(() => {
 bellIcon.addEventListener('click', function (e) {
   e.preventDefault();
   bellNotification.classList.toggle('fade-in');
+});
+
+// Implementing the profile functionality
+profileBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  profileDiv.classList.toggle('fade-in');
 });
