@@ -642,23 +642,37 @@ input {
 
       & p {
         color: var(--font-dark, var(--grey-g-200, #303030));
-
-        /* Text-13/regular */
         font-family: Inter;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-        line-height: 140%; /* 18.2px */
+        line-height: 140%;
       }
     }
   }
 
   .profile-flex-middle {
     display: flex;
-    padding: 0.6rem;
-    align-items: center;
-    gap: 0.8rem;
+    padding: 0rem 0.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
     align-self: stretch;
+
+    & p {
+      display: flex;
+      padding: 0.6rem;
+      align-items: center;
+      gap: 0.8rem;
+      align-self: stretch;
+      border-radius: 0.8rem;
+      color: var(--font-dark, var(--grey-g-200, #303030));
+      font-family: Inter;
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; 
+    }
   }
 }
 
